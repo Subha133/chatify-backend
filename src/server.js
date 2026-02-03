@@ -16,7 +16,10 @@ app.set("trust proxy", true);
 app.use(cookieParser());
 app.use(express.json({ limit: "5mb"}));
 app.use(cors({
-  origin: process.env.CLIENT_URL, // Vite frontend
+  origin: [
+    'https://chatifyfrontend-five.vercel.app',
+    'https://chatify-web-pi.vercel.app'
+  ],
   credentials: true
 }));
 app.get('/', (req, res) => {
@@ -43,4 +46,3 @@ server.listen(PORT,()=>{
     connectDb();
     console.log("app is running on port : "+PORT);
 })
-
