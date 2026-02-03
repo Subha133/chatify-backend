@@ -9,9 +9,12 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server,{
    cors: {
-    origin: ENV.CLIENT_URL,
-    credentials: true,
-  },
+  origin: [
+    'https://chatifyfrontend-five.vercel.app',
+    'https://chatify-web-pi.vercel.app'
+  ],
+  credentials: true,
+},
 });
 
 io.use(socketAuthMiddleware);
