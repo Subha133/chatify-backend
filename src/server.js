@@ -24,13 +24,13 @@ app.use("/api/auth",authRoutes);
 app.use("/api/messages",messageRoutes);
 
 //make ready for deployment
-if(process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(_dirname, "../chatify/dist")))
+// if(process.env.NODE_ENV === "production") {
+//     app.use(express.static(path.join(_dirname, "../chatify/dist")))
 
-    app.get("*",(_, res)=>{
-        res.sendFile(path.join(_dirname, "../chatify","dist","index.html"));
-    })
-}
+//     app.get("*",(_, res)=>{
+//         res.sendFile(path.join(_dirname, "../chatify","dist","index.html"));
+//     })
+// }
 
 
 const PORT = process.env.PORT || 3000;
