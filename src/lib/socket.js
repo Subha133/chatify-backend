@@ -12,7 +12,7 @@ const io = new Server(server,{
   origin: [
     'https://chatifyfrontend-five.vercel.app',
     'https://chatify-web-pi.vercel.app',
-    'chatify-frontend-theta.vercel.app'
+    'https://chatify-frontend-theta.vercel.app'
   ],
   credentials: true,
 },
