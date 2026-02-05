@@ -11,7 +11,8 @@ const io = new Server(server,{
    cors: {
   origin: [
     'https://chatifyfrontend-five.vercel.app',
-    'https://chatify-web-pi.vercel.app'
+    'https://chatify-web-pi.vercel.app',
+    'chatify-frontend-theta.vercel.app'
   ],
   credentials: true,
 },
